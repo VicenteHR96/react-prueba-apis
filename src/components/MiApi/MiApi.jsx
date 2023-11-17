@@ -20,8 +20,8 @@ function MiApi() {
       const res = await fetch(url, options);
       const data = await res.json();
       const dataOrdenada = data
-        .slice(0, 20)
-        .sort((a, b) => a.title.localeCompare(b.title));
+        .sort((a, b) => a.title.localeCompare(b.title))
+        .slice(0, 20);
       setGames(dataOrdenada);
     } catch (error) {
       console.error(error);
@@ -58,6 +58,7 @@ function MiApi() {
           <Spinner animation="border" variant="light" />
         </Row>
       )}
+      ;
     </>
   );
 }

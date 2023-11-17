@@ -1,9 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import NavBar from "./components/NavBar/NavBar";
 import "./App.css";
 import MiApi from "./components/MiApi/MiApi";
-import MyForm from "./components/MyForm/MyForm";
 
 function App() {
   return (
