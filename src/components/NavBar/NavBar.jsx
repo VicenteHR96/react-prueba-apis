@@ -5,8 +5,16 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faGamepad } from "@fortawesome/free-solid-svg-icons";
+import ModalPopup from "../ModalPopup/ModalPopup";
+import { useState } from "react";
+import Registro from "../registro/Registro";
 
 function NavBar() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <Navbar bg="dark" data-bs-theme="dark" expand="lg">
@@ -35,11 +43,15 @@ function NavBar() {
             </Nav>
             <Form className="d-flex gap-3">
               <Button variant="primary">Log In</Button>
-              <Button variant="outline-primary">Sign Up</Button>
+              <Button variant="outline-primary" onClick={handleShow}>
+                Sign Up
+              </Button>
             </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      <ModalPopup show={show} handleClose={handleClose}></ModalPopup>
     </>
   );
 }

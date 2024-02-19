@@ -154,6 +154,36 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.rrssButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.alertDiv {
+  padding-top: 1rem;
+}
+
+.rrssContainer {
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  object-fit: contain;
+  /* color: white; */
+  transition: all 0.15s;
+}
+
+.rrssContainer:hover {
+  color: #5e5c5cc4;
+  border-color: #ffffffc4;
+  box-shadow: 1px 1px 20px white;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
