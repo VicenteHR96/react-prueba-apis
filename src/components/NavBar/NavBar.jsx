@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faGamepad } from "@fortawesome/free-solid-svg-icons";
 import ModalPopup from "../ModalPopup/ModalPopup";
 import { useState } from "react";
-import Registro from "../registro/Registro";
 
 function NavBar() {
   const [show, setShow] = useState(false);
